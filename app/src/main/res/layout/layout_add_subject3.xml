@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="rtl">
+
+    <ImageView
+        android:id="@+id/add_photo"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/_15sdp"
+        android:src="@drawable/ic_add_a_photo_black_24dp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/prim_stroke_white_solid"/>
+
+    <TextView
+        android:id="@+id/image_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/_10sdp"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:text="@string/image_notice"
+        android:textSize="@dimen/_13sdp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp">
+
+        <LinearLayout
+            android:id="@+id/add_voice_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_10sdp"
+            >
+
+            <ImageView
+                android:id="@+id/add_voice"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/prim_stroke_white_solid"
+                android:src="@drawable/ic_keyboard_voice_black_24dp"
+                android:padding="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/voice_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="@string/voice_notice"
+                android:textSize="@dimen/_13sdp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/add_video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_below="@id/add_voice_layout"
+            >
+
+            <ImageView
+                android:id="@+id/add_video"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/prim_stroke_white_solid"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_videocam_black_24dp"
+                android:padding="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/_10sdp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="@string/video_notice"
+                android:textSize="@dimen/_13sdp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_15sdp"
+        android:text="@string/full_text"
+        android:textColor="@color/colorPrimary"
+        android:layout_margin="@dimen/_10sdp"/>
+
+    <View
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_3sdp"
+        android:layout_gravity="right"
+        android:background="@color/colorPrimary"
+        android:layout_margin="@dimen/_10sdp"/>
+
+    <in.nashapp.androidsummernote.Summernote
+        android:id="@+id/summernote"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_margin="@dimen/_10sdp"/>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:text="@string/save"
+            android:background="@drawable/prim_solid"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"/>
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_20sdp"
+            android:text="@string/cancel"
+            android:background="@drawable/prim_solid"
+            android:textColor="@color/white"
+            android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+
+</LinearLayout>
